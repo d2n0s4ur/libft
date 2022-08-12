@@ -6,7 +6,7 @@
 /*   By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 13:33:40 by jnoh              #+#    #+#             */
-/*   Updated: 2022/03/11 15:24:50 by jnoh             ###   ########.fr       */
+/*   Updated: 2022/08/08 13:20:27 by jnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
+	if (!s)
+		return (0);
 	len = 0;
 	while (s[len])
 		len++;

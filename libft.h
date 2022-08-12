@@ -6,7 +6,7 @@
 /*   By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 10:59:27 by jnoh              #+#    #+#             */
-/*   Updated: 2022/03/13 20:28:54 by jnoh             ###   ########.fr       */
+/*   Updated: 2022/08/08 13:18:59 by jnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 /*
 Part 1
 */
@@ -74,5 +77,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+/*
+gnl
+*/
+char	*get_next_line(int fd);
 
 #endif

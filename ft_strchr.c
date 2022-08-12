@@ -6,7 +6,7 @@
 /*   By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 16:29:23 by jnoh              #+#    #+#             */
-/*   Updated: 2022/03/12 14:51:11 by jnoh             ###   ########.fr       */
+/*   Updated: 2022/08/08 13:17:13 by jnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strchr(const char *s, int c)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 	{
 		if (s[i] == (char)c)

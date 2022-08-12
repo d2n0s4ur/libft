@@ -6,7 +6,7 @@
 /*   By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 13:47:16 by jnoh              #+#    #+#             */
-/*   Updated: 2022/03/09 20:22:13 by jnoh             ###   ########.fr       */
+/*   Updated: 2022/08/08 13:16:50 by jnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (!dst && !src)
+	if (!dst || !src)
 		return (0);
 	i = 0;
 	while (i < n)
